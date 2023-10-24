@@ -20,4 +20,4 @@ runs:
         folders=$(tree -J -d -L 1 | jq -c '.[0].contents | map(.name)')
         echo $folders
         listfolders=$(jq -c -n '$ARGS.positional' --args "$folders")
-        echo "folders=$folders" >> $GITHUB_OUTPUT
+        echo "folders=$listfolders" >> $GITHUB_OUTPUT
